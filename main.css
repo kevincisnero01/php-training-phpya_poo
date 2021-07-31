@@ -1,0 +1,12 @@
+.container{
+	min-height: 400px;
+	padding: 10px;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+
+.box{
+	padding: 5px 10px;
+	border-radius: 5px;
+	margin: 5px;
+}
