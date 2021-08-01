@@ -6,13 +6,11 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-<h1>Herencia 3-Sobreescribir Constructor</h1>
+<h1>Herencia 4-Clase y metodo Abstract</h1>
 <div class="container">
 <?php
-/*
-Problema:Implementar la clase Operacion. El constructor recibe e inicializa los atributos $valor1 y $valor2. La subclase Suma añade un atributo $titulo. El constructor de la clase Suma recibe los dos valores a sumar y el título.
-*/
-class Operation
+
+abstract class Operation
 {
 	protected $value1;
 	protected $value2;
@@ -28,6 +26,8 @@ class Operation
 	{
 		echo $this->result;
 	}
+
+	public abstract function Operate();
 }
 
 class Sum extends Operation
@@ -49,12 +49,15 @@ class Sum extends Operation
 
 
 }
-$v1 = 1000;
-$v2 = 700;
+$v1 = 2000;
+$v2 = 800;
 
 $sum1 = new Sum("La suma de valores ",$v1,$v2);
 $sum1->operate();
 $sum1->print();
+
+
+
 
 ?>
 </div>
